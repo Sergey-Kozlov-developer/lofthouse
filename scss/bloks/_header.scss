@@ -11,7 +11,7 @@
       rgba(45, 52, 60, 0.38) 51.04%,
       #242b33 92.19%
     ),
-    url('./../img/header/header-bg.jpg'), lightgray 50% / cover no-repeat;
+    url("./../img/header/header-bg.jpg"), lightgray 50% / cover no-repeat;
 }
 
 .header__top-row {
@@ -34,4 +34,9 @@
   bottom: 0;
   left: 50%;
   transform: translate(-50%, 0%);
+}
+.header__footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
 }
