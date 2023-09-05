@@ -41,3 +41,13 @@ a {
 
   white-space: nowrap;
 }
+.none {
+  display: none !important;
+}
+
+.title-2 {
+  font-size: 36px;
+  font-weight: bold;
+  font-family: $font-accent;
+  color: $accent;
+}
