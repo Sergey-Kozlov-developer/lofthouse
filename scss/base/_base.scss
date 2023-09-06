@@ -1,53 +1,58 @@
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Raleway:wght@400;700&family=Roboto:wght@300&display=swap");
 
 body {
-  font-family: $font-main;
-  background-color: $dark;
-  color: $white;
-  font-style: 16px;
+	font-family: $font-main;
+	background-color: $dark;
+	color: $white;
+	font-style: 16px;
 }
 a {
-  color: $white;
-  transition: color 0.2s ease-in;
-  &:hover {
-    color: $accent;
-  }
+	color: $white;
+	transition: color 0.2s ease-in;
+	&:hover {
+		color: $accent;
+	}
 }
 
 .container {
-  margin: 0 auto;
-  padding: 0 15px;
-  max-width: 1140px;
+	margin: 0 auto;
+	padding: 0 15px;
+	max-width: 1140px;
 
-  &--sm {
-    max-width: 840px;
-  }
+	&--sm {
+		max-width: 840px;
+	}
 }
 .text-right {
-  text-align: right;
+	text-align: right;
 }
 // делаем невидимым h2 в visually-hidden
 .visually-hidden {
-  height: 1px;
-  overflow: hidden;
-  width: 1px;
+	height: 1px;
+	overflow: hidden;
+	width: 1px;
 
-  /* Keep the layout */
-  position: absolute;
-  /* Remove any visible trace */
-  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
-  clip: rect(1px, 1px, 1px, 1px);
-  clip-path: inset(50%);
+	/* Keep the layout */
+	position: absolute;
+	/* Remove any visible trace */
+	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: inset(50%);
 
-  white-space: nowrap;
+	white-space: nowrap;
 }
 .none {
-  display: none !important;
+	display: none !important;
 }
 
 .title-2 {
-  font-size: 36px;
-  font-weight: bold;
-  font-family: $font-accent;
-  color: $accent;
+	font-size: 36px;
+	font-weight: bold;
+	font-family: $font-accent;
+	color: $accent;
+}
+
+.link-bold {
+	color: $accent;
+	font-weight: 700;
 }
