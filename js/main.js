@@ -9,3 +9,50 @@ navBtn.onclick = function () {
 	nav.classList.toggle('header__top-row--mobile');
 	document.body.classList.toggle('no-scroll');
 }
+
+// Phone Mask
+mask('[data-tel-input]');
+
+// Удаляем '+' если больше ничего не введено, чтобы показать placeholder
+const phoneInputs = document.querySelectorAll('[data-tel-input]');
+phoneInputs.forEach((input)=>{
+	input.addEventListener('input', ()=>{
+		if (input.value == '+') input.value = '';
+	})
+	input.addEventListener('blur', ()=>{
+		if (input.value == '+') input.value = '';
+	})
+});
+
+/* Yandex Map */
+
+// Функция ymaps.ready() будет вызвана, когда
+// загрузятся все компоненты API, а также когда будет готово DOM-дерево.
+initMap();
+
+async function initMap() {
+	// Промис `ymaps3.ready` будет зарезолвлен, когда загрузятся все компоненты основного модуля API
+	await ymaps3.ready;
+
+	const {YMap, YMapDefaultSchemeLayer} = ymaps3;
+
+	// Иницилиазируем карту
+	const map = new YMap(
+		// Передаём ссылку на HTMLElement контейнера
+		document.getElementById('map'),
+
+		// Передаём параметры инициализации карты
+		{
+			location: {
+				// Координаты центра карты
+				center: [59.943093, 30.339853],
+
+				// Уровень масштабирования
+				zoom: 16
+			}
+		}
+	);
+
+	// Добавляем слой для отображения схематической карты
+	map.addChild(new YMapDefaultSchemeLayer());
+}
